@@ -7,6 +7,8 @@ RUN apk --no-cache add py-pip python &&\
     apk add --update curl &&\
     apk del py-pip
 
-USER awscli-app
+WORKDIR /data
 
-VOLUME ["/data"]
+RUN chown awscli-app /data
+
+USER awscli-app
