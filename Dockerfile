@@ -9,6 +9,4 @@ RUN apk --no-cache add py-pip python &&\
 
 USER awscli-app
 
-ENTRYPOINT ["/bin/sh"]
-
 VOLUME ["/data"]
